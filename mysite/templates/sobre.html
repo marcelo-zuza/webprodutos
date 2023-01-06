@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre este site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+
+</head>
+<body>
+    <center>
+          <h1>SOBRE ESTE SITE</h1>
+    </center>
+    <h3>
+      Este site foi criado como uma prática de uso do Framework Django e a linguagem Pyhton.
+      <br>
+    Tudo contido aqui é apenas um exercício de aprendizado, não se preocupe pois
+    pode haver erros e TUDA INFORMAÇÃO AQUI É FICCIONAL!
+    </h3>
+<br>
+<a href="{% url 'index' %}">Volte para a página principal</a>
+<script src="{% static './js/script.js' %}"></script>
+</body>
+</html>

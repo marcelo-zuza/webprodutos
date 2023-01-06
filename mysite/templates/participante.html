@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Itens</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+
+</head>
+<body>
+<center><h1>{{ participantes.nome_completo }}</h1></center>
+<br>
+<p><b>Nome completo</b>: {{ participantes.nome_completo }}</p>
+<p><b>Filme favorito</b>: {{ participantes.filme_favorito }}</p>
+<p><b>Cidade:</b> {{ participantes.cidade }}</p>
+<p><b>Estado:</b> {{ participantes.estado }}</p>
+<p><b>Idade:</b> {{ participantes.idade }}</p>
+
+<br>
+<a href="{% url 'participantes' %}">Volte para a página de participantes</a>
+<br>
+<a href="{% url 'index' %}">Volte para a página principal</a>
+<script src="{% static './js/script.js' %}"></script>
+</body>
+</html>
+

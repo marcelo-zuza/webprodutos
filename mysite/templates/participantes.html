@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PARTICIPANTES</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+
+</head>
+<body>
+
+    <h1>VEJA A LISTA DE PARTICIPANTES DA NOSSA EQUIPE</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome completo</th>
+                <th>Filme favorito</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for itens in participantes %}
+            <tr>
+                <td> <a href="{% url 'participante' itens.id %}">{{ itens.nome_completo }}</a></td>
+                <td>{{ itens.filme_favorito }}</td>
+                <td>{{ itens.cidade }}</td>
+                <td>{{ itens.estado }}</td>
+                <td>{{ itens.idade }}</td>
+
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<br>
+<a href="{% url 'index' %}">Volte para a página principal</a>
+<script src="{% static './js/script.js' %}"></script>
+</body>
+</html>
+

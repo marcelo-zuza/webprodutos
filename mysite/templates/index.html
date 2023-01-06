@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+</head>
+<body>
+    <center>
+        <h1>BEM VINDO AO MEU SITE</h1>
+        <img class="img1" src="{% static './img/img1.jpg' %}" alt="">
+    </center>
+    
+
+    <br>
+    <a href="{% url 'participantes' %}">Conheça nossos Participantes</a>
+    <br>
+    <a href="{% url 'sobre' %}">Saiba um pouco sobre esta página</a>
+    <br>
+    <br>
+    <button onclick="button()">Clique e veja se esse botão funciona</button>
+</body>
+<script src="{% static './js/script.js' %}"></script>
+</html>
